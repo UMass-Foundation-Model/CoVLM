@@ -28,10 +28,10 @@ python -m spacy download en_core_web_md
 
 ## Checkpoint
 
-| Model      | Checkpoint                                                                        |
-| ---------- | --------------------------------------------------------------------------------- |
-| CoVLM-1.4B | [huggingface](https://huggingface.co/senfu/covlm-1.4b/blob/main/checkpoint_18000.pt) |
-| CoVLM-2.8B | [huggingface](https://huggingface.co/senfu/covlm-2.8b/blob/main/checkpoint_15000.pt) |
+| Model      | Checkpoint                                                                           |
+| ---------- | ------------------------------------------------------------------------------------ |
+| CoVLM-1.4B | [huggingface](https://huggingface.co/senfu/covlm-1.4b/resolve/main/checkpoint_18000.pt) |
+| CoVLM-2.8B | [huggingface](https://huggingface.co/senfu/covlm-2.8b/resolve/main/checkpoint_15000.pt) |
 
 ## Evaluation
 
