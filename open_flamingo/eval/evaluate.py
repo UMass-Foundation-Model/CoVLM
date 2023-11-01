@@ -141,6 +141,9 @@ def main():
         args.lm_path,
         args.lm_tokenizer_path,
     )
+
+    flamingo.expr_name = "eval"
+    flamingo.step_num = "final"
     if args.rank == 0:
         print(args)
     checkpoint = torch.load(args.checkpoint_path, map_location="cpu")
