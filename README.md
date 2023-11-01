@@ -1,5 +1,13 @@
 # CoVLM: Composing Visual Entities and Relationships in Large Language Models Via Communicative Decoding
 
+## News and ToDo List
+
+* [ ] Release training scripts
+* [ ] Release pre-training dataset
+* [ ] Release demo
+* [X] 2023-11-1: Release 1.4B/2.8B checkpoint
+* [X] 2023-11-1: Release initial code
+
 ## Installation
 
 ```bash
@@ -20,7 +28,10 @@ python -m spacy download en_core_web_md
 
 ## Checkpoint
 
-
+| Model      | Checkpoint                                                                        |
+| ---------- | --------------------------------------------------------------------------------- |
+| CoVLM-1.4B | [huggingface](https://huggingface.co/senfu/covlm-1.4b/blob/main/checkpoint_18000.pt) |
+| CoVLM-2.8B | [huggingface](https://huggingface.co/senfu/covlm-2.8b/blob/main/checkpoint_15000.pt) |
 
 ## Evaluation
 
