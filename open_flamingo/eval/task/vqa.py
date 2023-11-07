@@ -67,7 +67,7 @@ def evaluate_vqa(
     rank=0,
     world_size=1,
     id=0,
-    is_test=True,
+    is_test=False,
 ):
     if world_size > 1:
         torch.distributed.barrier()
@@ -90,7 +90,6 @@ def evaluate_vqa(
     tokenizer.padding_side = "left"
     if world_size > 1:
         torch.distributed.barrier()
-    this_tot = 0
     for ii, batch in enumerate(more_itertools.chunked(
         tqdm(eval_dataset, desc="Running inference", disable=(rank != 0)), batch_size
     )):
@@ -132,11 +131,6 @@ def evaluate_vqa(
         ]
         if vqa_dataset == "ok_vqa":
             new_predictions = postprocessor._lemmatize(new_predictions)
-        this_tot += 1
-        if rank == 0 and this_tot % 20 == 0:
-            for i in range(1):
-                tqdm.write("model output: " + new_predictions[i])
-
         if is_test:
             predictions.extend(
                 [

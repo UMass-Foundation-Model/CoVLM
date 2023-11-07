@@ -337,6 +337,7 @@ class Flamingo(nn.Module):
             logits_processor=logits_processor_list,
             return_dict_in_generate=return_dict_in_generate,
             output_scores=output_scores,
+            pad_token_id=self.eoc_token_id,
         )
         self.lang_encoder.clear_conditioned_layers()
         return output

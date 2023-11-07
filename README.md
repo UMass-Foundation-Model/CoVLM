@@ -40,3 +40,21 @@ python -m spacy download en_core_web_md
 ```bash
 bash eval_refcocog.sh CHECKPOINT
 ```
+
+### Cola
+
+```bash
+bash eval_cola.sh CHECKPOINT
+```
+
+### ARO
+
+```bash
+bash eval_aro.sh CHECKPOINT
+```
+
+### VQAv2
+
+```bash
+bash eval_vqav2.sh CHECKPOINT
+```

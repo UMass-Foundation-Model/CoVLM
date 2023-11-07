@@ -217,7 +217,6 @@ def main():
             rank=args.rank,
             world_size=args.world_size,
             id=args.id,
-            choose_left_right=args.choose_left_right,
         )
         results["aro"].append({"score": aro_score})
 

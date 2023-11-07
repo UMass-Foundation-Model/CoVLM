@@ -37,6 +37,7 @@ def get_outputs(
     outputs = outputs[:, len(input_ids[0]):]
     return outputs
 
+
 def preprocess_visual_info(Text):
     text = Text.split(" ")
     for is_idx, t in enumerate(text):
@@ -99,6 +100,7 @@ def find_root(token):
     while token.dep_ in ["compound", "amod"]:
         token = token.head
     return token
+
 
 def get_object_from_text(text, verbose=False):
     if len(text.split(" ")) == 3:
@@ -206,9 +208,6 @@ def get_bbox(visual_box_list, batch_images, prompt, model, tokenizer, media_toke
             image_nums=image_nums,
             image_start_index_list=image_start_index_list,
             added_bbox_list=visual_box_list,
-            add_box=visual_box_list is not None,
-            relations=None,
-            debug_mode=False,
         )
     boxes = outputs["boxes"]
     scores = outputs["scores"]
@@ -236,7 +235,7 @@ def _eval_text_image(text, image, model, tokenizer, image_processor, vis_embed_s
         first_text = f"<|#object#|>{objects[0]}<|#endofobject#|><|#visual#|>"
     else:
         first_text = text[:first_idx-1] + f"<|#object#|> {objects[0]}<|#endofobject#|><|#visual#|>"
-    
+
     if debug:
         tqdm.write(first_text)
     prompt = [f"{tokenizer.bos_token}<|#image#|>{tokenizer.pad_token*vis_embed_size}<|#endofimage#|>{first_text}"]
@@ -307,8 +306,6 @@ def _eval_text_image(text, image, model, tokenizer, image_processor, vis_embed_s
                     image_nums=image_nums,
                     image_start_index_list=image_start_index_list,
                     added_bbox_list=this_added_bbox_list,
-                    add_box=this_added_bbox_list is not None and len(this_added_bbox_list) != 0,
-                    relations=None,
                 )
             if not model.valid and debug:
                 import pdb; pdb.set_trace()

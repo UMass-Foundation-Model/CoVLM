@@ -16,7 +16,7 @@ def evaluate_aro(
     rank=0,
     world_size=1,
     id=0,
-    dataset_root: str = "~/scratch/code/vision-language-models-are-bows/data"
+    dataset_root: str = "/gpfs/u/home/LMCG/LMCGljnn/scratch/code/vision-language-models-are-bows/data"
 ):
     # os.makedirs(f"visualization/aro_results_{id}", exist_ok=True)
     dataset_name = "aro"
@@ -95,8 +95,6 @@ def evaluate_aro(
                     image_nums=image_nums,
                     image_start_index_list=image_start_index_list,
                     added_bbox_list=added_bbox_list,
-                    add_box=added_bbox_list is not None,
-                    relations=None,
                 )
             logits_list.append([pre_score, outputs.logits])
         pre_scores = np.array([x[0] for x in logits_list])
