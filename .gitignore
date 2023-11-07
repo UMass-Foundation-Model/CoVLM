@@ -7,8 +7,6 @@ pycocoevalcap/
 checkpoints_align_*
 segment-anything/
 refcocog_images
-*.jpg
-*.png
 Scene-Graph-Benchmark.pytorch/
 temp/
 *.pkl
