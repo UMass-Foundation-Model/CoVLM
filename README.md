@@ -32,10 +32,10 @@ python -m spacy download en_core_web_md
 
 ## Checkpoint
 
-| Model      | Checkpoint                                                                           |
-| ---------- | ------------------------------------------------------------------------------------ |
-| CoVLM-1.4B | [huggingface](https://huggingface.co/senfu/covlm-1.4b/resolve/main/checkpoint_18000.pt) |
-| CoVLM-2.8B | [huggingface](https://huggingface.co/senfu/covlm-2.8b/resolve/main/checkpoint_15000.pt) |
+| Model      | vision encoder | LLM         | Checkpoint                                                                           |
+| ---------- | -------------- | ----------- | ------------------------------------------------------------------------------------ |
+| CoVLM-1.4B | ViT-L-14       | pythia-1.4b | [huggingface](https://huggingface.co/senfu/covlm-1.4b/resolve/main/checkpoint_18000.pt) |
+| CoVLM-2.8B | ViT-L-14       | pythia-2.8b | [huggingface](https://huggingface.co/senfu/covlm-2.8b/resolve/main/checkpoint_15000.pt) |
 
 ## Evaluation
 
