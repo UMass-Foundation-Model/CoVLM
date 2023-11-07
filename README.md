@@ -62,3 +62,10 @@ bash eval_aro.sh CHECKPOINT
 ```bash
 bash eval_vqav2.sh CHECKPOINT
 ```
+
+### More tasks will be available soon
+
+## Citation
+
+If our work is useful or relevant to your research, please kindly recognize our contributions by citing our paper:
+

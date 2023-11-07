@@ -12,6 +12,9 @@ temp/
 *.pkl
 *.zip
 *.csv
+*.png
+*.jpg
+!image/
 
 wandb/
 checkpoints*/
