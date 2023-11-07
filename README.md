@@ -4,6 +4,8 @@
 
 This repository contains the official code for CoVLM: Composing Visual Entities and Relationships in Large Language Models Via Communicative Decoding.
 
+[[Project Page](https://vis-www.cs.umass.edu/CoVLM)] [[Paper](https://arxiv.org/abs/2311.03354)]
+
 ## News and ToDo List
 
 * [ ] Release training scripts
@@ -69,3 +71,13 @@ bash eval_vqav2.sh CHECKPOINT
 
 If our work is useful or relevant to your research, please kindly recognize our contributions by citing our paper:
 
+```
+@misc{li2023covlm,
+      title={CoVLM: Composing Visual Entities and Relationships in Large Language Models Via Communicative Decoding}, 
+      author={Junyan Li and Delin Chen and Yining Hong and Zhenfang Chen and Peihao Chen and Yikang Shen and Chuang Gan},
+      year={2023},
+      eprint={2311.03354},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
