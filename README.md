@@ -1,5 +1,9 @@
 # CoVLM: Composing Visual Entities and Relationships in Large Language Models Via Communicative Decoding
 
+![1699293310655](image/README/1699293310655.png)
+
+This repository contains the official code for CoVLM: Composing Visual Entities and Relationships in Large Language Models Via Communicative Decoding.
+
 ## News and ToDo List
 
 * [ ] Release training scripts
